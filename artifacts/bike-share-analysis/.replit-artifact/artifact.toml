@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Bike-Share Data Analysis"
+description = "A portfolio project exploring NYC bike-share trips with a reproducible Python cleaning and analysis pipeline plus an interactive dashboard of patterns, comparisons, and evidence-based conclusions."
+version = "1.0.0"
+id = "artifacts/bike-share-analysis"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21988
+
+[services.development]
+run = "pnpm --filter @workspace/bike-share-analysis run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/bike-share-analysis", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/bike-share-analysis/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21988"
+BASE_PATH = "/"

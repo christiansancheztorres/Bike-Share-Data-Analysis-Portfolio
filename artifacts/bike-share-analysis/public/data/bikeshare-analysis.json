@@ -1,0 +1,573 @@
+{
+  "metadata": {
+    "title": "What shapes a bike-share ride?",
+    "location": "Washington, D.C. (Capital Bikeshare)",
+    "period": "Jan 2011 \u2013 Dec 2012",
+    "source": "UCI Machine Learning Repository \u2014 Bike Sharing Dataset",
+    "source_url": "https://archive.ics.uci.edu/dataset/275/bike+sharing+dataset",
+    "citation": "Fanaee-T, H. & Gama, J. (2013). Event labeling combining ensemble detectors and background knowledge. Progress in Artificial Intelligence. https://doi.org/10.1007/s13748-013-0040-3",
+    "grain": "One row per hour; rentals are aggregated counts, not individual trip records.",
+    "downloaded_rows": 17379,
+    "analyzed_rows": 17379
+  },
+  "summary": {
+    "total_rides": 3292679,
+    "registered_rides": 2672662,
+    "casual_rides": 620017,
+    "registered_share_pct": 81.16983161735475,
+    "casual_share_pct": 18.830168382645258,
+    "average_hourly_rides": 189.46308763450142,
+    "registered_peak_hour": 17,
+    "registered_peak_average": 387.17808219178085,
+    "casual_peak_hour": 14,
+    "casual_peak_average": 75.5679012345679,
+    "workingday_casual_share_pct": 13.229963226473451,
+    "offday_casual_share_pct": 31.66468220048807,
+    "clear_vs_light_rain_drop_pct": 45.53635098206078
+  },
+  "quality": {
+    "input_rows": 17379,
+    "output_rows": 17379,
+    "null_cells_in_source": 0,
+    "duplicate_rows_removed": 0,
+    "invalid_rows_removed": 0,
+    "duplicate_hourly_keys_removed": 0,
+    "count_mismatches_in_source": 0
+  },
+  "hourly": [
+    {
+      "hr": 0,
+      "hour_label": "00:00",
+      "casual": 10.1584022039,
+      "registered": 43.7396694215,
+      "cnt": 53.8980716253
+    },
+    {
+      "hr": 1,
+      "hour_label": "01:00",
+      "casual": 6.5041436464,
+      "registered": 26.8715469613,
+      "cnt": 33.3756906077
+    },
+    {
+      "hr": 2,
+      "hour_label": "02:00",
+      "casual": 4.772027972,
+      "registered": 18.0979020979,
+      "cnt": 22.8699300699
+    },
+    {
+      "hr": 3,
+      "hour_label": "03:00",
+      "casual": 2.7159253945,
+      "registered": 9.0114777618,
+      "cnt": 11.7274031564
+    },
+    {
+      "hr": 4,
+      "hour_label": "04:00",
+      "casual": 1.2539454806,
+      "registered": 5.0989956958,
+      "cnt": 6.3529411765
+    },
+    {
+      "hr": 5,
+      "hour_label": "05:00",
+      "casual": 1.4114365411,
+      "registered": 18.4783821478,
+      "cnt": 19.889818689
+    },
+    {
+      "hr": 6,
+      "hour_label": "06:00",
+      "casual": 4.1613793103,
+      "registered": 71.8827586207,
+      "cnt": 76.044137931
+    },
+    {
+      "hr": 7,
+      "hour_label": "07:00",
+      "casual": 11.0550206327,
+      "registered": 201.0096286107,
+      "cnt": 212.0646492435
+    },
+    {
+      "hr": 8,
+      "hour_label": "08:00",
+      "casual": 21.6795048143,
+      "registered": 337.3314993122,
+      "cnt": 359.0110041265
+    },
+    {
+      "hr": 9,
+      "hour_label": "09:00",
+      "casual": 30.8913342503,
+      "registered": 188.4181568088,
+      "cnt": 219.3094910591
+    },
+    {
+      "hr": 10,
+      "hour_label": "10:00",
+      "casual": 46.477303989,
+      "registered": 127.1911966988,
+      "cnt": 173.6685006878
+    },
+    {
+      "hr": 11,
+      "hour_label": "11:00",
+      "casual": 59.5405777166,
+      "registered": 148.6024759285,
+      "cnt": 208.1430536451
+    },
+    {
+      "hr": 12,
+      "hour_label": "12:00",
+      "casual": 68.293956044,
+      "registered": 185.021978022,
+      "cnt": 253.3159340659
+    },
+    {
+      "hr": 13,
+      "hour_label": "13:00",
+      "casual": 72.3086419753,
+      "registered": 181.3525377229,
+      "cnt": 253.6611796982
+    },
+    {
+      "hr": 14,
+      "hour_label": "14:00",
+      "casual": 75.5679012346,
+      "registered": 165.3813443073,
+      "cnt": 240.9492455418
+    },
+    {
+      "hr": 15,
+      "hour_label": "15:00",
+      "casual": 74.9053497942,
+      "registered": 176.3278463649,
+      "cnt": 251.2331961591
+    },
+    {
+      "hr": 16,
+      "hour_label": "16:00",
+      "casual": 73.7452054795,
+      "registered": 238.2383561644,
+      "cnt": 311.9835616438
+    },
+    {
+      "hr": 17,
+      "hour_label": "17:00",
+      "casual": 74.2739726027,
+      "registered": 387.1780821918,
+      "cnt": 461.4520547945
+    },
+    {
+      "hr": 18,
+      "hour_label": "18:00",
+      "casual": 61.1208791209,
+      "registered": 364.3901098901,
+      "cnt": 425.510989011
+    },
+    {
+      "hr": 19,
+      "hour_label": "19:00",
+      "casual": 48.7706043956,
+      "registered": 262.7527472527,
+      "cnt": 311.5233516484
+    },
+    {
+      "hr": 20,
+      "hour_label": "20:00",
+      "casual": 36.2335164835,
+      "registered": 189.7967032967,
+      "cnt": 226.0302197802
+    },
+    {
+      "hr": 21,
+      "hour_label": "21:00",
+      "casual": 28.2554945055,
+      "registered": 144.0590659341,
+      "cnt": 172.3145604396
+    },
+    {
+      "hr": 22,
+      "hour_label": "22:00",
+      "casual": 22.2527472527,
+      "registered": 109.0824175824,
+      "cnt": 131.3351648352
+    },
+    {
+      "hr": 23,
+      "hour_label": "23:00",
+      "casual": 15.1991758242,
+      "registered": 72.6318681319,
+      "cnt": 87.831043956
+    }
+  ],
+  "weekday": [
+    {
+      "weekday_name": "Sunday",
+      "casual": 56.1634692246,
+      "registered": 121.3053557154,
+      "cnt": 177.46882494
+    },
+    {
+      "weekday_name": "Monday",
+      "casual": 28.5534489714,
+      "registered": 155.1912061315,
+      "cnt": 183.7446551029
+    },
+    {
+      "weekday_name": "Tuesday",
+      "casual": 23.5805136567,
+      "registered": 167.6583774969,
+      "cnt": 191.2388911537
+    },
+    {
+      "weekday_name": "Wednesday",
+      "casual": 23.1591919192,
+      "registered": 167.9713131313,
+      "cnt": 191.1305050505
+    },
+    {
+      "weekday_name": "Thursday",
+      "casual": 24.8725212465,
+      "registered": 171.5641440712,
+      "cnt": 196.4366653177
+    },
+    {
+      "weekday_name": "Friday",
+      "casual": 31.4587856856,
+      "registered": 164.6771210294,
+      "cnt": 196.1359067149
+    },
+    {
+      "weekday_name": "Saturday",
+      "casual": 61.2468152866,
+      "registered": 128.962977707,
+      "cnt": 190.2097929936
+    }
+  ],
+  "day_type": [
+    {
+      "day_type": "Weekend / holiday",
+      "casual": 57.4414218353,
+      "registered": 123.9639100472,
+      "cnt": 181.4053318825
+    },
+    {
+      "day_type": "Working day",
+      "casual": 25.5613147914,
+      "registered": 167.6464391066,
+      "cnt": 193.207753898
+    }
+  ],
+  "weather": [
+    {
+      "weather_label": "Clear",
+      "average_rides": 204.8692718829,
+      "observations": 11413,
+      "casual_rides": 40.5454306493,
+      "registered_rides": 164.3238412337
+    },
+    {
+      "weather_label": "Mist / cloudy",
+      "average_rides": 175.1654929577,
+      "observations": 4544,
+      "casual_rides": 29.595290493,
+      "registered_rides": 145.5702024648
+    },
+    {
+      "weather_label": "Light rain or snow",
+      "average_rides": 111.5792811839,
+      "observations": 1419,
+      "casual_rides": 16.0556730092,
+      "registered_rides": 95.5236081748
+    },
+    {
+      "weather_label": "Heavy rain or snow",
+      "average_rides": 74.3333333333,
+      "observations": 3,
+      "casual_rides": 2.6666666667,
+      "registered_rides": 71.6666666667
+    }
+  ],
+  "seasonal": [
+    {
+      "season_name": "Winter",
+      "average_rides": 116.9341641194,
+      "casual_rides": 11.4502703974,
+      "registered_rides": 105.4838937221,
+      "observations": 4253
+    },
+    {
+      "season_name": "Spring",
+      "average_rides": 188.6539336062,
+      "casual_rides": 41.048431105,
+      "registered_rides": 147.6055025011,
+      "observations": 4398
+    },
+    {
+      "season_name": "Summer",
+      "average_rides": 236.7667499432,
+      "casual_rides": 50.8975698387,
+      "registered_rides": 185.8691801045,
+      "observations": 4403
+    },
+    {
+      "season_name": "Fall",
+      "average_rides": 213.4506358382,
+      "casual_rides": 38.5401156069,
+      "registered_rides": 174.9105202312,
+      "observations": 4325
+    }
+  ],
+  "monthly": [
+    {
+      "year": 2011,
+      "month": 1,
+      "month_name": "Jan",
+      "period": "2011-01",
+      "average_rides": 55.5072674419,
+      "total_rides": 38189,
+      "casual_rides": 3073,
+      "registered_rides": 35116
+    },
+    {
+      "year": 2011,
+      "month": 2,
+      "month_name": "Feb",
+      "period": "2011-02",
+      "average_rides": 74.2912172573,
+      "total_rides": 48215,
+      "casual_rides": 6242,
+      "registered_rides": 41973
+    },
+    {
+      "year": 2011,
+      "month": 3,
+      "month_name": "Mar",
+      "period": "2011-03",
+      "average_rides": 87.7328767123,
+      "total_rides": 64045,
+      "casual_rides": 12826,
+      "registered_rides": 51219
+    },
+    {
+      "year": 2011,
+      "month": 4,
+      "month_name": "Apr",
+      "period": "2011-04",
+      "average_rides": 131.9471488178,
+      "total_rides": 94870,
+      "casual_rides": 22346,
+      "registered_rides": 72524
+    },
+    {
+      "year": 2011,
+      "month": 5,
+      "month_name": "May",
+      "period": "2011-05",
+      "average_rides": 182.5551075269,
+      "total_rides": 135821,
+      "casual_rides": 31050,
+      "registered_rides": 104771
+    },
+    {
+      "year": 2011,
+      "month": 6,
+      "month_name": "Jun",
+      "period": "2011-06",
+      "average_rides": 199.3222222222,
+      "total_rides": 143512,
+      "casual_rides": 30612,
+      "registered_rides": 112900
+    },
+    {
+      "year": 2011,
+      "month": 7,
+      "month_name": "Jul",
+      "period": "2011-07",
+      "average_rides": 189.9744623656,
+      "total_rides": 141341,
+      "casual_rides": 36452,
+      "registered_rides": 104889
+    },
+    {
+      "year": 2011,
+      "month": 8,
+      "month_name": "Aug",
+      "period": "2011-08",
+      "average_rides": 186.9917920657,
+      "total_rides": 136691,
+      "casual_rides": 28842,
+      "registered_rides": 107849
+    },
+    {
+      "year": 2011,
+      "month": 9,
+      "month_name": "Sep",
+      "period": "2011-09",
+      "average_rides": 177.709902371,
+      "total_rides": 127418,
+      "casual_rides": 26545,
+      "registered_rides": 100873
+    },
+    {
+      "year": 2011,
+      "month": 10,
+      "month_name": "Oct",
+      "period": "2011-10",
+      "average_rides": 166.2328398385,
+      "total_rides": 123511,
+      "casual_rides": 25222,
+      "registered_rides": 98289
+    },
+    {
+      "year": 2011,
+      "month": 11,
+      "month_name": "Nov",
+      "period": "2011-11",
+      "average_rides": 142.0959666203,
+      "total_rides": 102167,
+      "casual_rides": 15594,
+      "registered_rides": 86573
+    },
+    {
+      "year": 2011,
+      "month": 12,
+      "month_name": "Dec",
+      "period": "2011-12",
+      "average_rides": 117.8448043185,
+      "total_rides": 87323,
+      "casual_rides": 8448,
+      "registered_rides": 78875
+    },
+    {
+      "year": 2012,
+      "month": 1,
+      "month_name": "Jan",
+      "period": "2012-01",
+      "average_rides": 130.5587044534,
+      "total_rides": 96744,
+      "casual_rides": 8969,
+      "registered_rides": 87775
+    },
+    {
+      "year": 2012,
+      "month": 2,
+      "month_name": "Feb",
+      "period": "2012-02",
+      "average_rides": 149.0419075145,
+      "total_rides": 103137,
+      "casual_rides": 8721,
+      "registered_rides": 94416
+    },
+    {
+      "year": 2012,
+      "month": 3,
+      "month_name": "Mar",
+      "period": "2012-03",
+      "average_rides": 221.9044414536,
+      "total_rides": 164875,
+      "casual_rides": 31618,
+      "registered_rides": 133257
+    },
+    {
+      "year": 2012,
+      "month": 4,
+      "month_name": "Apr",
+      "period": "2012-04",
+      "average_rides": 242.651810585,
+      "total_rides": 174224,
+      "casual_rides": 38456,
+      "registered_rides": 135768
+    },
+    {
+      "year": 2012,
+      "month": 5,
+      "month_name": "May",
+      "period": "2012-05",
+      "average_rides": 263.2594086022,
+      "total_rides": 195865,
+      "casual_rides": 44235,
+      "registered_rides": 151630
+    },
+    {
+      "year": 2012,
+      "month": 6,
+      "month_name": "Jun",
+      "period": "2012-06",
+      "average_rides": 281.7083333333,
+      "total_rides": 202830,
+      "casual_rides": 43294,
+      "registered_rides": 159536
+    },
+    {
+      "year": 2012,
+      "month": 7,
+      "month_name": "Jul",
+      "period": "2012-07",
+      "average_rides": 273.6653225806,
+      "total_rides": 203607,
+      "casual_rides": 41705,
+      "registered_rides": 161902
+    },
+    {
+      "year": 2012,
+      "month": 8,
+      "month_name": "Aug",
+      "period": "2012-08",
+      "average_rides": 288.310483871,
+      "total_rides": 214503,
+      "casual_rides": 43197,
+      "registered_rides": 171306
+    },
+    {
+      "year": 2012,
+      "month": 9,
+      "month_name": "Sep",
+      "period": "2012-09",
+      "average_rides": 303.5736111111,
+      "total_rides": 218573,
+      "casual_rides": 43778,
+      "registered_rides": 174795
+    },
+    {
+      "year": 2012,
+      "month": 10,
+      "month_name": "Oct",
+      "period": "2012-10",
+      "average_rides": 280.8488700565,
+      "total_rides": 198841,
+      "casual_rides": 34538,
+      "registered_rides": 164303
+    },
+    {
+      "year": 2012,
+      "month": 11,
+      "month_name": "Nov",
+      "period": "2012-11",
+      "average_rides": 212.6239554318,
+      "total_rides": 152664,
+      "casual_rides": 21009,
+      "registered_rides": 131655
+    },
+    {
+      "year": 2012,
+      "month": 12,
+      "month_name": "Dec",
+      "period": "2012-12",
+      "average_rides": 166.7291105121,
+      "total_rides": 123713,
+      "casual_rides": 13245,
+      "registered_rides": 110468
+    }
+  ],
+  "interpretation": {
+    "registered_peak": "Registered riders peak around 17:00 on average, while casual riders peak around 14:00.",
+    "rider_mix": "Casual riders account for 13.2% of working-day rentals and 31.7% on weekends and holidays.",
+    "weather": "Average hourly rentals in light rain or snow are 45.5% below clear-weather rentals.",
+    "caveat": "These are descriptive associations in a historical, hourly aggregate. They do not identify causes, represent individual trips, or predict current demand."
+  }
+}
