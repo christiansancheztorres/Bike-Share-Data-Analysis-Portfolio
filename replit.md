@@ -1,10 +1,12 @@
-# [Project name]
+# Bike-Share Data Analysis Portfolio
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+A reproducible Python/pandas analysis and interactive report examining patterns in Capital Bikeshare's 2011–2012 hourly rental data.
 
 ## Run & Operate
 
 - `pnpm --filter @workspace/api-server run dev` — run the API server (port 5000)
+- `pnpm --filter @workspace/bike-share-analysis run dev` — run the interactive report
+- `python artifacts/bike-share-analysis/analysis/analyze.py` — rerun cleaning, analysis, exports, and static charts
 - `pnpm run typecheck` — full typecheck across all packages
 - `pnpm run build` — typecheck + build all packages
 - `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from the OpenAPI spec
@@ -22,15 +24,20 @@ _Replace the heading above with the project's name, and this line with one sente
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/bike-share-analysis/analysis/analyze.py` — source of truth for cleaning, validation, analysis, and report-data generation
+- `artifacts/bike-share-analysis/analysis/data/hour.csv` — supplied UCI hourly source data
+- `artifacts/bike-share-analysis/public/data/bikeshare-analysis.json` — generated report dataset
+- `artifacts/bike-share-analysis/src/` — interactive report UI
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- The small official UCI Capital Bikeshare dataset is bundled for reliable, offline reproduction.
+- The Python pipeline generates all report metrics; the React report presents those outputs and does not duplicate analysis logic.
+- Results are framed as descriptive associations because the dataset is historical and aggregated hourly.
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+Readers can review quantified findings, explore interactive charts, download each chart's data, inspect the cleaning audit and methodology, switch themes, and print the report as a PDF.
 
 ## User preferences
 
@@ -38,7 +45,8 @@ _Populate as you build — explicit user instructions worth remembering across s
 
 ## Gotchas
 
-_Populate as you build — sharp edges, "always run X before Y" rules._
+- Rerun the Python analysis after replacing the source CSV so the report JSON and static chart exports stay synchronized.
+- The source's season coding is ambiguous relative to calendar months, so the pipeline derives Northern Hemisphere seasons from parsed dates.
 
 ## Pointers
 
